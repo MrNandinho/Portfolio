@@ -13,7 +13,6 @@ body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
     min-height: 100vh;
-    /* Ajustado para 80px para dar o respiro correto com a navbar fixa */
     padding-top: 80px; 
 }
 
@@ -60,7 +59,7 @@ body {
     transform: scale(1.05);
 }
 
-/* Utility Layouts */
+
 .text-accent {
     color: var(--accent-blue) !important;
 }
@@ -72,7 +71,7 @@ body {
     text-transform: uppercase;
 }
 
-/* Home Page specific styles */
+/* Home Page styles */
 .hero-section {
     padding: 5rem 0;
 }
@@ -143,11 +142,9 @@ body {
     margin-bottom: 1rem;
 }
 
-/* --- Estilização dos Cards de Projetos --- */
+/* Estilização dos Cards de Projetos */
 .project-card {
-    /* Cor padrão azul caso algum card não tenha cor definida no HTML */
     --project-color: var(--accent-blue); 
-    
     background-color: var(--card-bg);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
@@ -156,7 +153,6 @@ body {
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Quando passas o rato no card, a borda ganha a cor personalizada do projeto */
 .project-card:hover {
     border-color: var(--project-color);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
@@ -201,7 +197,6 @@ body {
     transition: all 0.2s ease;
 }
 
-/* No hover, as tags de tecnologia também acendem com a cor do projeto */
 .project-card:hover .project-tag {
     border-color: var(--project-color);
     color: #ffffff;
@@ -308,7 +303,7 @@ body {
     background-color: rgba(255, 255, 255, 0.02);
 }
 
-/* --- Efeito de Foto "Hover" (Sobre) --- */
+/* Efeito de Foto "Hover" (Sobre) */
 .photo-hover-container {
     position: relative;
     width: 100%;
@@ -374,7 +369,7 @@ body {
     opacity: 1;
 }
 
-/* --- Novo Estilo do Footer --- */
+/* Estilo do Footer */
 .custom-footer {
     background-color: var(--bg-secondary);
     padding: 2rem 0;
@@ -402,9 +397,9 @@ body {
     display: block;
 }
 
-/* --- 1. Definições dos Keyframes (Como as animações se comportam) --- */
+/* Definições dos Keyframes */
 
-/* Revelação suave de baixo para cima */
+
 @keyframes fadeInUp {
 from {
 opacity: 0;
@@ -416,15 +411,11 @@ transform: translateY(0);
 }
 }
 
-/* Revelação simples de opacidade (para a Navbar) */
 @keyframes fadeIn {
 from { opacity: 0; }
 to { opacity: 1; }
 }
 
-/* --- 2. Aplicação do Efeito de Carregamento da Página (Page Load) --- */
-
-/* Aplica o efeito nas secções e textos principais */
 .hero-section,
 section.container,
 .timeline-container,
@@ -432,7 +423,7 @@ section.container,
 animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-/* Pequeno atraso (delay) nos elementos secundários para criar ritmo visual */
+
 .hero-section .text-secondary,
 section.container .text-secondary,
 .highlight-bar {
@@ -446,14 +437,12 @@ animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
 animation-delay: 0.25s;
 }
 
-/* Suavizar a entrada da navbar fixa */
+
 .navbar-custom {
 animation: fadeIn 0.5s ease both;
 }
 
-/* --- 3. Micro-interações Modernas (Hover Effects) --- */
 
-/* Botões do tipo "Pílula" (Filled e Outline) */
 .btn-pill-filled,
 .btn-pill-outline {
 transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
@@ -469,7 +458,7 @@ transform: translateY(-2px) scale(1.03);
 box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05);
 }
 
-/* Ajuste nos cliques dos botões (Efeito de pressão) */
+
 .btn-pill-filled:active,
 .btn-pill-outline:active {
 transform: translateY(0) scale(0.98);
@@ -503,7 +492,7 @@ transition: transform 0.3s ease;
 transform: translateY(3px);
 }
 
-/* --- 4. Respeito pelas Definições do Utilizador (Acessibilidade) --- */
+/* (Acessibilidade) */
 @media (prefers-reduced-motion: reduce) {
 *, ::before, ::after {
 animation-delay: -1ms !important;
