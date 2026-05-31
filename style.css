@@ -81,12 +81,10 @@ body {
     line-height: 1.2;
 }
 .photo-placeholder {
-    background-color: #e2e8f0;
-    aspect-ratio: 4 / 5;
-    border-radius: 4px;
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
+    width: 100%;       /* Ocupa a largura total do retângulo */
+    height: 100%;      /* Ocupa a altura total do retângulo */
+    object-fit: cover; /* Faz o corte automático perfeito sem distorcer a tua cara */
+    object-position: center 20%; /* Garante que o foco fica bem centrado no teu rosto */
 }
 .btn-pill-filled {
     background-color: var(--accent-blue);
